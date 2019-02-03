@@ -13,7 +13,6 @@ function createGrid(gridDensity) {
   for (let i = 0; i < gridDensity * gridDensity; i++) {
     const gridItems = document.createElement('div');
     gridItems.className = "grid-item";
-    // gridItems.innerText = i + 1;
     gridContainer.appendChild(gridItems);
   }
   gridContainer.style.gridTemplateColumns = `repeat(${gridDensity}, 1fr)`;
@@ -35,8 +34,13 @@ function resetGrid() {
   freshGrid.addEventListener('click', function(e) {
     document.querySelector('.container').innerHTML = "";
     const gridDensity = Number(prompt("Please enter number of rows and columns:"));
-    // const gridDensity = requestedGridDensity * requestedGridDensity;
     gridInit(gridDensity);
-  });
-
+  }, { once: true });
 }
+
+
+// dietCokeHeadToday at 2: 09 PM
+// @bycdiaz It's because you're calling resetGrid which sets up an event listener
+// so everytime you click the reset button you create another event listener
+// and those two create another 2
+// and those 4 create another 4
