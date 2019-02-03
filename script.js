@@ -37,10 +37,3 @@ function resetGrid() {
     gridInit(gridDensity);
   }, { once: true });
 }
-
-
-// dietCokeHeadToday at 2: 09 PM
-// @bycdiaz It's because you're calling resetGrid which sets up an event listener
-// so everytime you click the reset button you create another event listener
-// and those two create another 2
-// and those 4 create another 4
