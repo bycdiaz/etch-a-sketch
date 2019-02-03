@@ -1,0 +1,28 @@
+#title {
+  width: 500px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.container {
+  display: grid;
+  width: 400px;
+  height: 400px;
+  border: solid 10px #9a0000;
+}
+
+.grid-item {
+  width: auto;
+  height: auto;
+  background-color: black;
+}
+
+.grid-item-hovered {
+  width: auto;
+  height: auto;
+  background-color: #4f4f4f;
+}
